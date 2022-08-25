@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<script src="blackpopchange.js"></script>
+<body>
+
+<h2>blackpopchange</h2>
+
+<table id="mytable">
+  <tr>
+    
+    <th>AreaName</th>
+    <th>PercentChange</th>
+  </tr>
+
+
+</body>
+<script>
+  var x = document.getElementById('mytable')
+
+  for (var i = 0; i<blackpopchange.objects.length; i++){
+  var myNewRow = document.createElement('tr');
+  var myNewCell1 = document.createElement('td');
+  var myNewCell2 = document.createElement('td');
+  myNewCell1.innerText = blackpopchange.objects[i].AreaName;
+  myNewCell2.innerText = blackpopchange.objects[i].PercentChange;
+  myNewRow.append(myNewCell1)
+  myNewRow.append(myNewCell2)
+  x.append(myNewRow)
+}
+</script>
+</html>

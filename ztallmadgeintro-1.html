@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1ZT</title>
+</head>
+<style>
+    body {
+        background-color: rgb(50, 128, 197);
+    }
+
+    #daredbox {
+position:absolute;
+top: 25%;
+width: 100%;
+height: 50%;
+background-color: azure;
+
+    }
+
+    .daBlueBox{
+        position:absolute;
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: 50%;
+        background-color: coral;
+
+    }
+
+    h1{
+        position:relative;
+        text-align: center;
+        top: 25%
+    }
+
+</style>
+<body>
+    <div id="daredbox">
+        <div class="daBlueBox">
+            <div onclick="console.log ('the div was clicked')"></div>
+            <h1 onclick="daAlert('hello there')">Click Here!</h1>
+        </div>
+    </div>
+</body>
+
+<script>
+    function daAlert() {
+        alert('Hello There!')
+    }
+</script>
+</html>
