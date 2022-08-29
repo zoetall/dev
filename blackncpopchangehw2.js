@@ -1,6 +1,6 @@
-"Black, NH Population  Change in North Carolina, 2010-2020",,
-Area Name,2010,2020
-North Carolina,21.2,20.2
+"Black, NH Population  Change in North Carolina, 2010-2020",
+AreaName,2010,2020
+NorthCarolina,21.2,20.2
 Alamance,18.5,19.6
 Alexander,5.4,5.3
 Alleghany,1.2,0.9
@@ -65,7 +65,8 @@ Mitchell,0.3,0.3
 Montgomery,18.6,16.3
 Moore,13.3,10.6
 Nash,37,38.6
-New Hanover,14.5,12
+NewHanover,14.5,12
+NewHanover,14.5,12
 Northampton,58.1,55.2
 Onslow,15,13.2
 Orange,11.8,10.5
@@ -101,3 +102,5 @@ Wilkes,4,3.9
 Wilson,38.7,37.9
 Yadkin,3,2.9
 Yancey,0.7,0.6
+Yancey,0.7,0.6
+
