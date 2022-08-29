@@ -102,5 +102,3 @@ Wilkes,4,3.9
 Wilson,38.7,37.9
 Yadkin,3,2.9
 Yancey,0.7,0.6
-Yancey,0.7,0.6
-
