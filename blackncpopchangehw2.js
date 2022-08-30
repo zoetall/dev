@@ -1,5 +1,4 @@
-"Black, NH Population  Change in North Carolina, 2010-2020",
-AreaName,2010,2020
+AreaName,P2010,P2020
 NorthCarolina,21.2,20.2
 Alamance,18.5,19.6
 Alexander,5.4,5.3
