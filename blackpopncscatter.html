@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scatter</title>
+</head>
+<style>
+    #myDiv {background-color: cornflowerblue;
+    width: 1000px;
+    height: 800px;
+    }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.14.0/plotly.min.js" integrity="sha512-XDnqTWsAcVl16AYJoBHumISzIYThowGjR67jeL53NSp6tajsq2qf5UeAWvk1n6Hp3M2iMsV/ewhPScBiLCDs9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="classexample.js"></script>
+
+
+
+<body>
+   <div id="myDiv"></div>
+
+<script> 
+    var y = data.map(e => (e.P2010))
+    var y2 = data.map(e => (e.P2020))
+    var x = data.map(e => (e.AreaName))
+    var trace1 = {
+  x: x,
+  y: y,
+  name: '2010',
+  mode: 'markers',
+  type: 'scatter',
+  marker: {
+    color: y, colorscale: 'Portland'
+  }
+};
+
+var trace2 = {
+  x: x,
+  y: y2,
+  name: '2020',
+  mode: 'markers',
+  type: 'scatter',
+  marker: {
+    color: y, colorscale: 'Portland'
+  }
+};
+
+
+var layout = {title:
+  {
+    text: 'Changing Black Population in NC'
+  },
+
+xaxis: {
+  title: {
+    text: 'Area Name'
+    }
+  },
+
+yaxis: {
+  title: {
+    text: 'Percent of Population'
+  }
+},
+
+annotations: [
+    {
+      x: 80,
+      y: 65,
+      xref: 'x',
+      yref: 'y',
+      text: 'benefits in that it is easy to see changes between years, <br> but limitations in that you cant tell which year is which',
+      showarrow: false,
+      arrowhead: 3,
+      ax: -30,
+      ay: -40
+    }
+  ]
+}
+
+
+var data = [trace1, trace2];
+
+Plotly.newPlot('myDiv', data, layout);
+
+</script>
+</body>
+</html>
