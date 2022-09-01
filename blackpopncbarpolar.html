@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scatter</title>
+</head>
+<style>
+    #myDiv {background-color: cornflowerblue;
+    width: 800px;
+    height: 800px;
+    }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.14.0/plotly.min.js" integrity="sha512-XDnqTWsAcVl16AYJoBHumISzIYThowGjR67jeL53NSp6tajsq2qf5UeAWvk1n6Hp3M2iMsV/ewhPScBiLCDs9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="classexample.js"></script>
+
+<body>
+   <div id="myDiv"></div>
+
+<script> 
+    var y = data.map(e => (e.P2010))
+    var y2 = data.map(e => (e.P2020))
+    var x = data.map(e => (e.AreaName))
+    var trace1 = {
+      r: y, y2,
+  mode: 'markers',
+  type: 'barpolar',
+  marker: {
+    color: y, colorscale: 'Portland'
+  }
+};
+
+var layout = {title:
+  {
+    text: 'Changing Black Population in NC'
+  },
+  annotations: [
+    {
+      r: 60,
+      degree: 360,
+      xref: 'r',
+      yref: 'degree',
+      text: 'limitations to understanding the change in population percentage between years, benefits are their appearance',
+      showarrow: false
+    },
+    {
+      x: 30,
+      y: 60,
+      xref: 'x2',
+      yref: 'y2',
+      showarrow: false,
+      arrowhead: 2,
+      ax: -25,
+      ay: -40
+    }
+  ] 
+}
+
+
+var data = [trace1];
+
+Plotly.newPlot('myDiv', data, layout);
+
+</script>
+</body>
+</html>
