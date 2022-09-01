@@ -20,17 +20,28 @@
    <div id="myDiv"></div>
 
 <script> 
-    var y = data.map(e => (e.P2010))
+   var x = data.map(e => (e.AreaName))
+   var y = data.map(e => (e.P2010))
     var y2 = data.map(e => (e.P2020))
-    var x = data.map(e => (e.AreaName))
     var trace1 = {
-      r: y, y2,
+      r: y,
+      name: 'P2010',
+  mode: 'markers',
+  type: 'barpolar',
+  marker: {
+    color: y, colorscale: 'Portland'
+  }};
+
+  var trace2 = {
+    r: y2,
+    name: 'P2020',
   mode: 'markers',
   type: 'barpolar',
   marker: {
     color: y, colorscale: 'Portland'
   }
-};
+     };
+    
 
 var layout = {title:
   {
@@ -59,7 +70,7 @@ var layout = {title:
 }
 
 
-var data = [trace1];
+var data = [trace1, trace2];
 
 Plotly.newPlot('myDiv', data, layout);
 
