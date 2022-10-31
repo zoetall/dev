@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        img{
+            position: absolute;
+            height: 400px;
+        }
+        button{
+            position:absolute;
+            top:400px;
+        }
+    </style>
+<body>
+
+    <img id= 'before' src="./9thStreet2005.png" alt="" >
+    <img id= 'during' src="./9thStreet2010.png" alt="" >
+    <img  id= 'after' src="./9thStreet2020.png" alt="" >
+    <button onclick="myFunction()">click me</button>
+  
+</body>
+<script>
+    var before = document.getElementById('before');
+    var during = document.getElementById('during');
+    var after = document.getElementById('after');
+    var afterIsVisible = true;
+    function myFunction() {
+        if (afterIsVisible) {
+            after.style.visibility = 'hidden'
+            afterIsVisible = false;
+    }
+    else {
+        after.style.visibility = 'visible';
+        afterIsVisible = true;
+    }
+    }
+
+   
+</script>
+</html>
