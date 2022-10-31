@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        img{
+            position: absolute;
+            height: 400px;
+        }
+        button{
+            position:absolute;
+            top:400px;
+        }
+    </style>
+<body>
+
+    <img id= 'before' src="./9thStreet2005.png" alt="" >
+    <img id= 'during' src="./9thStreet2010.png" alt="" >
+    <img  id= 'after' src="./9thStreet2020.png" alt="" >
+    <button style="left:10px" onclick="myFunction('before')">before</button>
+    <button style="left:100px" onclick="myFunction('during')">during</button>
+    <button style="left:200px" onclick="myFunction('after')">after</button>
+</body>
+<script>
+function myFunction(id){
+    var imgs=document.getElementsByTagName('img')
+    var daImg = document.getElementById(id)
+    for(var i=0; i<imgs.length;i++) {imgs[i].style.visibility='hidden'}
+    daImg.style.visibility='visible'
+    console.log(daImg)
+}
+
+</script>
+</html>
